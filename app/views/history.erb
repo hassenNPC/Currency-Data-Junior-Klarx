@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <title>History</title>
+    <!--import  styles file-->
+    <link rel="stylesheet" type="text/css" href="/css/historystyle.css">
+
+	</head>
+    <section>
+  <!--the page of history-->
+  <div>
+  <h1>TRANSACTION HISTORY</h1>
+	<body>
+    <table class="tbl-header" cellpadding="0" cellspacing="0" border="0">
+      <!--the head of the table-->
+      <thead>
+        <tr>
+          <th>From</th>
+          <th>To</th>
+          <th>VALUE</th>
+          <th>RESULT</th>
+     
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+  <!--body of the table-->
+
+<!--show all history iterate the exchanges that contains all transactions--> 
+<% @exchanges.each do |exchange| %>
+  <tr>
+    <!--extract the transaction and show it -->
+    <td><%= exchange.fromcoin %></td>
+    <td><%= exchange.tocoin %></td>
+    <td><%= exchange.value %></td>
+    <td><%= exchange.result %></td>
+  </tr>
+<% end %>
+
+
+
+      </tbody>
+    </table>
+  </div >
+  <div align="center">
+
+<button class ="button"   onclick="window.location.href = '/';">HOME PAGE</button>
+
+  </div>
+</section>
+
+
+	
+
+
+
+	</body>
+</html>

@@ -1,8 +1,87 @@
 <!DOCTYPE html>
 <html>
 	<head>
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+ 
+
 	</head>
 	<body>
-		<h1>Hello world!</h1>
+  
+
+  <% if @result==nil %>
+        <% @result="" %>
+  <% end %>
+  <% if @caution==nil %>
+        <% @caution="" %>
+  <% end %>
+  <% if @message==nil %>
+        <% @message="please enter the amount and click change." %>
+  <% end %>
+
+
+
+ 
+ <div class="testbox">
+
+      <form action="/result">
+        <div class="banner">
+          <h1>EXCHANGE COIN APPLICATION</h1>
+        </div>
+        <div class="item">
+          <p >Amount to exchange</p>
+          <div class="name-item">
+            <input type="text" name="FromValue"  />
+        
+          <p >Choose your exchange source </p>
+
+          
+            <select name ="From" >
+              <option value="USD">From USD</option>
+              <option value="EUR">From EUR</option>
+              <option value="CHF">From CHF</option>
+           
+       
+            </select>
+             <p >Choose your exchange target </p>
+            <select name ="To" >
+              <option value="USD">From USD</option>
+              <option value="EUR">From EUR</option>
+              <option value="CHF">From CHF</option>
+            </select>
+            
+          </div>
+        </div>
+        
+  <% if @result=="" %>
+        <p style="color: red"><%= @caution %> </p>
+        <p><%= @message %><br> 
+          <%= @result %></p>
+  <% else %>   
+        
+        <p><%= @message %> </p>
+        <p style="color: red"> <%= @result %></p>  
+  <% end %>
+
+    
+
+        <div class="btn-block">
+          <button method="get" type="submit" href="/result">Exchange</button>
+           <button type ="button" method="get" onclick="window.location.href = './history';"  >See History</button>
+        </div>
+
+
+
+  </form>
+
+ 
+    </div>
+
+  </div>
+
+
+
+
+
 	</body>
 </html>

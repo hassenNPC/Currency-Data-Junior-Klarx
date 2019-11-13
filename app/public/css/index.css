@@ -1,0 +1,185 @@
+      html, body {
+   background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+  background: linear-gradient(to right, #25c481, #25b7c4);
+  font-family: 'Roboto', sans-serif;
+      
+      }
+      body, form, input, select, textarea, p { 
+      padding: 10px;
+      margin: 3px;
+      bottom: 10px ;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 13x;
+      color: #555555;
+      line-height: 25px;
+      }
+
+      h1 {
+      position: absolute;
+      margin: 0;
+      line-height: 20px;
+      font-size: 25px;
+      color:#555555;
+      z-index: 2;
+      }
+
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 20px;
+      }
+      form {
+
+      width: 35%;
+      padding: 20px;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.3);
+      box-shadow: 0 0 30px 0 #555555; 
+      }
+      .banner {
+      position: relative;
+      height: 100px;
+      
+      
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      }
+ 
+      input, select, textarea {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      }
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      }
+      input[type="date"] {
+      padding: 4px 5px;
+      }
+      select {
+      width: 100%;
+      padding: 7px 0;
+      background: transparent;
+      
+      font-size: 20px;
+      }
+      textarea {
+      width: calc(100% - 20px);
+      padding: 5px;
+      }
+      .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder {
+      color:  #555555;
+      }
+      .item input:hover, .item select:hover, .item textarea:hover {
+      border: 2px solid transparent;
+      box-shadow: 0 0 5px 0 #555555;
+      color: #555555;
+      }
+      .item {
+      position: relative;
+      margin: 10px 0;
+      }
+      input[type="date"]::-webkit-inner-spin-button {
+      display: none;
+      }
+
+      .item i {
+      right: 2%;
+      top: 28px;
+      z-index: 1;
+      }
+      [type="date"]::-webkit-calendar-picker-indicator {
+      right: 1%;
+      z-index: 2;
+      opacity: 0;
+      cursor: pointer;
+      }
+      input[type=radio], input[type=checkbox]  {
+      display: none;
+      }
+      label.radio, label.checkbox {
+      position: relative;
+      display: inline-block;
+      margin: 5px 20px 15px 6px;
+      cursor: pointer;
+      }
+      .question span {
+      margin-left: 30px;
+      }
+      label.radio:before, label.checkbox:before{
+      content: "";
+      position: absolute;
+      
+      left: 0px;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      ;
+      }
+      label.checkbox:before{ border-radius: 5px}
+      input[type=radio]:checked + label:before, label.radio:hover:before,
+      input[type=checkbox]:checked + label:before, label.chekbox:hover:before {
+      border: 2px solid #555555;
+      
+      }
+      label.radio:after, label.checkbox:after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 5px;
+      width: 8px;
+      height: 4px;
+      border: 3px solid #555555;
+      border-top: none;
+      border-right: none;
+      transform: rotate(-45deg);
+      opacity: 0;
+      }
+      input[type=radio]:checked + label:after, input[type=checkbox]:checked + label:after {
+      opacity: 1;
+      }
+      .btn-block {
+      margin-top: 10px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px; 
+      background: #555555;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background: #5b82d7;
+      }
+      @media (min-width: 568px) {
+      .name-item, {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      }
+      .name-item input, {
+      width: calc(50% - 20px);
+      }
+      }
+
+      p{
+
+            font-size: 20px ;
+      }
+
+            .btn{
+      margin-top: 10px;
+      text-align: right;
+      }
